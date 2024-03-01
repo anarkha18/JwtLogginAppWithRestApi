@@ -29,8 +29,10 @@ public class HomeController {
          return "user not saved!!!";
      }
     }
+
     @PreAuthorize("hasAuthority('USER')")
     @GetMapping("/userHome")
+
     public String userHome() {
         logger.info("hello");
         return "hello user";
